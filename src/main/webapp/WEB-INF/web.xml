@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         version="5.0">
+
+    <servlet>
+        <servlet-name>AddEmployeeServlet</servlet-name>
+        <servlet-class>AddEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddEmployeeServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+	    <servlet-name>EditEmployeeServlet</servlet-name>
+	    <servlet-class>EditEmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>EditEmployeeServlet</servlet-name>
+	    <url-pattern>/EditEmployeeServlet</url-pattern>
+	</servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UpdateEmployeeServlet</servlet-name>
+        <servlet-class>UpdateEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateEmployeeServlet</servlet-name>
+        <url-pattern>/UpdateEmployeeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+	    <servlet-name>DeleteEmployeeServlet</servlet-name>
+	    <servlet-class>DeleteEmployeeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>DeleteEmployeeServlet</servlet-name>
+	    <url-pattern>/DeleteEmployeeServlet</url-pattern>
+	</servlet-mapping>
+    
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
