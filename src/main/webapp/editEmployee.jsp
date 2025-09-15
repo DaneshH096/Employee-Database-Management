@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="model.Employee"  %>
 <html>
 <head>
     <title>Edit Employee</title>
@@ -54,16 +55,17 @@
 
 <div class="form-container">
     <h2>Edit Employee</h2>
+    <% Employee emp=(Employee)request.getAttribute("emp"); %>
     <form action="UpdateEmployeeServlet" method="post">
-        <input type="hidden" name="id" value="${id}">
+        <input type="hidden" name="id" value="${emp.getId()}">
         First Name:
-        <input type="text" name="firstName" value="${firstName}" required>
+        <input type="text" name="firstName" value="${emp.getfirstName()}" required>
         Last Name:
-        <input type="text" name="lastName" value="${lastName}" required>
+        <input type="text" name="lastName" value="${emp.getLastName()}" required>
         Salary:
-        <input type="number" name="salary" value="${salary}" required>
+        <input type="number" name="salary" value="${emp.getSalary()}" required>
         Designation:
-        <input type="text" name="designation" value="${designation}" required>
+        <input type="text" name="designation" value="${emp.getDesignation()}" required>
         <input type="submit" value="Update Employee">
     </form>
 </div>
