@@ -55,20 +55,25 @@
 
 <div class="form-container">
     <h2>Edit Employee</h2>
-    <% Employee emp=(Employee)request.getAttribute("emp"); %>
     <form action="UpdateEmployeeServlet" method="post">
-        <input type="hidden" name="id" value="${emp.getId()}">
+        <input type="hidden" name="id" value="${emp.id}">
+        
         First Name:
-        <input type="text" name="firstName" value="${emp.getfirstName()}" required>
+        <input type="text" name="firstName" value="${emp.firstName}" required><br>
+        
         Last Name:
-        <input type="text" name="lastName" value="${emp.getLastName()}" required>
+        <input type="text" name="lastName" value="${emp.lastName}" required><br>
+        
         Salary:
-        <input type="number" name="salary" value="${emp.getSalary()}" required>
+        <input type="number" name="salary" value="${emp.salary}" required><br>
+        
         Designation:
-        <input type="text" name="designation" value="${emp.getDesignation()}" required>
+        <input type="text" name="designation" value="${emp.designation}" required><br>
+        
         <input type="submit" value="Update Employee">
     </form>
 </div>
+
 
 </body>
 </html>
