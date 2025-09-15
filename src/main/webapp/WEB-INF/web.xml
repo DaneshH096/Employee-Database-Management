@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
          version="5.0">
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.css</url-pattern>
+		<url-pattern>*.js</url-pattern>
+		<url-pattern>*.png</url-pattern>
+		<url-pattern>*.jpg</url-pattern>
+		<url-pattern>*.avif</url-pattern>
+		<url-pattern>*.ico</url-pattern>
+	</servlet-mapping>
 
     <servlet>
         <servlet-name>AddEmployeeServlet</servlet-name>
@@ -45,3 +54,4 @@
     </welcome-file-list>
 
 </web-app>
+
