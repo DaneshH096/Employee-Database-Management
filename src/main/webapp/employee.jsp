@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*, java.util.*" %><!DOCTYPE html>
+<%@ page import="java.sql.*, java.util.*,util.DBConnection" %><!DOCTYPE html>
 <html>
 <head>
     <title>Employee List</title>
@@ -32,7 +32,7 @@
 	    border-radius: 20px;
 	    padding: 30px;
 	    width: 90%;
-	    max-width: 1000px;
+	    max-width: auto;
 	    overflow-x: auto;
 	}
 	
@@ -112,7 +112,7 @@
 
 <h2>All Employees</h2>
 
-<div class="form-container">
+<div class="table-container">
     <table border="1" width="100%" style="color:white; border-collapse: collapse;">
         <tr style="background-color: rgba(255,255,255,0.2);">
             <th>ID</th><th>First Name</th><th>Last Name</th><th>Salary</th><th>Designation</th><th>Action</th>
@@ -120,9 +120,8 @@
 
         <%
             try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee", "root", "root123");
-
+                Connection con = DBConnection.getConnection();   
+                
                 Statement stmt = con.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT * FROM emp");
 

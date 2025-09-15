@@ -71,3 +71,91 @@ form input[type="submit"].active {
 form input[type="submit"].active:hover {
     background-color: #218838;
 }
+
+
+.table-container {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    width: 95%;
+    max-width: 1000px;
+    overflow-x: auto;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+thead th {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 15px;
+}
+
+td, th {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 12px 15px;
+    text-align: left;
+    color: #000;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: rgba(240, 240, 240, 0.85);
+}
+
+/* Action buttons */
+.edit-button, .delete-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+.edit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+.delete-button:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+/* Back button */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
